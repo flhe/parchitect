@@ -27,3 +27,6 @@ ls /opt/puppetlabs/puppet/lib/ruby/vendory_ruby/puppet/provider/
 
 
 puppetserver: intermediate CA (greift auf CA zu, darf aber signieren!)
+
+
+docker: software defined networking (openshift, alles da drinn machen die Entwickler!)
