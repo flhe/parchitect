@@ -16,3 +16,11 @@ ohne doppelpunkt: abfrage von hier per internem lookup
 String[1] $ldap_binddn.
 Optional[String[1]] $ldap_binddn = undef,
 
+please see: https://puppet.com/docs/hiera/3.3/variables.html
+
+
+provider: apt, rpm, gem, pip
+ls /opt/puppetlabs/puppet/lib/ruby/vendory_ruby/puppet/provider/package/*.rb
+grep defaultfor /opt/puppetlabs/puppet/lib/ruby/vendory_ruby/puppet/provider/package/*.rb
+
+ls /opt/puppetlabs/puppet/lib/ruby/vendory_ruby/puppet/provider/
