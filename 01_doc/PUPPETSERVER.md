@@ -77,3 +77,7 @@ github tasks-playground
 puppet docs: Welcome to bolt
 puppet docs: writing plans
 example42: plans_and_tasks
+
+
+## Status der Pupppet Infrastructure (puppet pe only)
+puppet infrastructure status
