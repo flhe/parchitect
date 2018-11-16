@@ -24,3 +24,6 @@ ls /opt/puppetlabs/puppet/lib/ruby/vendory_ruby/puppet/provider/package/*.rb
 grep defaultfor /opt/puppetlabs/puppet/lib/ruby/vendory_ruby/puppet/provider/package/*.rb
 
 ls /opt/puppetlabs/puppet/lib/ruby/vendory_ruby/puppet/provider/
+
+
+puppetserver: intermediate CA (greift auf CA zu, darf aber signieren!)
