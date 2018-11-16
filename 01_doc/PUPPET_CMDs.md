@@ -44,16 +44,6 @@ EOF
 ```
 
 ```
-cat $HOME/.gitconfig << EOF
-[user]
-        name = $USER
-        email = florian@puppetlabs.vm
-[color]
-        ui = always
-EOF
-```
-
-```
 # User specific aliases and functions
 alias rm='rm -i'
 alias cp='cp -i'
@@ -72,3 +62,7 @@ validate_erb() {
 
 ## Docker
 dockerproject.org
+
+## Puppet Tasks (puppet pe)
+## Puppet with bolt (open sw) (shell, python, perl, ...)
+/opt/puppetlabs/puppet/bin/bolt task run service::linux action=stop name=ntp --nodes localhost --modulepath /etc/puppetlabs/code/modules --password puppet --user root

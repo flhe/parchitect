@@ -1,0 +1,6 @@
+[user]
+        name = $USER
+        email = florian@puppetlabs.vm
+[color]
+        ui = always
+
