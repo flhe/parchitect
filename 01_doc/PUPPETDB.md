@@ -4,6 +4,8 @@ siehe /etc/puppetlabs/puppetdb/conf.d/jetty.ini
 
 # REST-API: Curl über Puppetserver (query catalog or node facts)
 # permission through auth.conf
+/etc/puppetlabs/puppetserver/conf.d/auth.conf
+DEPRECATED: /etc/puppetlabs/puppet/auth.conf
 export CERT=$(puppet master --configprint hostcert)
 export CACERT=$(puppet master --configprint localcacert)
 export PRVKEY=$(puppet master --configprint hostprivkey)
