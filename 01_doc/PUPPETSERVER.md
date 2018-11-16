@@ -81,3 +81,24 @@ example42: plans_and_tasks
 
 ## Status der Pupppet Infrastructure (puppet pe only)
 puppet infrastructure status
+
+cat >> /etc/puppetlabs/puppet/puppet.conf << EOF
+[main]
+server = master.puppetlabs.vm
+certname = host.puppetlabs.vm
+user = pe-puppet
+group = pe-puppet
+mkusers = true
+module_groups = base+pe_only
+environment_timeout = 0
+dns_alt_names = host, proxy.puppetlabs.vm
+
+[master]
+node_terminus = classifier
+storeconfigs = true
+storeconfigs_backend = puppetdb
+reports = puppetdb
+certname = host.puppetlabs.vm
+always_retry_plugins = false
+disable_i18n = false
+EOF
