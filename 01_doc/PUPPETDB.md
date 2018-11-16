@@ -6,6 +6,19 @@ siehe /etc/puppetlabs/puppetdb/conf.d/jetty.ini
 # permission through auth.conf
 /etc/puppetlabs/puppetserver/conf.d/auth.conf
 DEPRECATED: /etc/puppetlabs/puppet/auth.conf
+
+https://github.com/puppetlabs/puppetlabs-puppet_authorization.git
+https://github.com/puppetlabs/puppetlabs-hocon.git
+puppet_authorization::rule { 'catalog_request':
+  match_request_path         => '^/puppet/v3/catalog/([^/]+)$',
+  match_request_type         => 'regex',
+  match_request_method       => ['get','post'],
+  match_request_query_params => {'environment' => [ 'production', 'test' ]},
+  allow                      => ['$1', 'adminhost.mydomain.com'],
+  sort_order                 => 200,
+  path                       => '/etc/puppetlabs/puppetserver/conf.d/auth.conf',
+}
+
 export CERT=$(puppet master --configprint hostcert)
 export CACERT=$(puppet master --configprint localcacert)
 export PRVKEY=$(puppet master --configprint hostprivkey)
