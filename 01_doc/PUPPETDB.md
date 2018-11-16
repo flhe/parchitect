@@ -25,4 +25,13 @@ export PRVKEY=$(puppet master --configprint hostprivkey)
 export CERT_OPTIONS="--cert ${CERT} --cacert ${CACERT} --key ${PRVKEY}"
 export MASTER="https://master.puppetlabs.vm:8140"
 
+# Zertificate revoke, clean and sign through REST API
+# can become automatised
 curl $CERT_OPTIONS ${MASTER}/puppet/v3/{node|catalog}/{CERTNAME}?environment=production | jq . | less
+# Auf dem CA Master:
+curl -X DELETE $CERT_OPTIONS ${MASTER}/puppet-ca/v1/certificate_status/{CERTNAME}?environment=production
+
+curl -X GET $CERT_OPTIONS ${MASTER}/status/v1/simple
+curl -X GET $CERT_OPTIONS ${MASTER}/status/v1/services
+curl -X POST $CERT_OPTIONS ${MASTER}/puppet-ca/v1/certificate_status/{CERTNAME}?environment=production --data '{"desired_state":"revoked"}'
+

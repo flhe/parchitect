@@ -53,14 +53,6 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias vi=vim
 #export TERM=ansi
-
-validate_yaml() {
-  ruby -ryaml -e "YAML.load_file '$1'"
-}
-
-validate_erb() {
-  erb -P -x -T '-' $1 | ruby -c
-}
 ```
 
 ## Docker
