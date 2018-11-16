@@ -3,4 +3,5 @@
         email = florian@puppetlabs.vm
 [color]
         ui = always
-
+[push]
+        default = simple

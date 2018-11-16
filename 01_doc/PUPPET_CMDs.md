@@ -66,3 +66,11 @@ dockerproject.org
 ## Puppet Tasks (puppet pe)
 ## Puppet with bolt (open sw) (shell, python, perl, ...)
 /opt/puppetlabs/puppet/bin/bolt task run service::linux action=stop name=ntp --nodes localhost --modulepath /etc/puppetlabs/code/modules --password puppet --user root
+
+
+puppet tasks in google gibt auch bolt output
+github tasks-playground
+
+puppet docs: Welcome to bolt
+puppet docs: writing plans
+example42: plans_and_tasks
