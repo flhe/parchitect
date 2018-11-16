@@ -15,7 +15,7 @@ ein cherry pick kann einfach reverted werden: git revert <commitid>
 https://git-scm.com/docs/git-cherry-pick
 https://www.ralfebert.de/git/cherry-pick/
 
-
+https://git-scm.com/book/de/v1/Git-Tools-%C3%84nderungshistorie-ver%C3%A4ndern
 git commit --amend
 
 ## git-flow !!

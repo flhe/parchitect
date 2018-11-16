@@ -1,6 +1,8 @@
 # PUPPET CLI CMDs
 
-## remove ca if only compilerserver in multimaster ha environment
+# important: tuning java heap, network parameter
+
+## compiler server: remove ca if only compilerserver in multimaster ha environment
 ```
 cat /etc/puppetlabs/puppetserver/bootstrap.cfg
 ```

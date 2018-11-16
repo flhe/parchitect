@@ -1,1 +1,1 @@
-beacer: vms nach test abreissen und neu deployen
+beaker: vms nach test abreissen und neu deployen
