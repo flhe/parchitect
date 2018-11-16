@@ -15,7 +15,8 @@ puppet agent --test --summarize
 cat /opt/puppetlabs/puppet/cache/state/last_run_summary.yaml
 ```
 
-### i.e. auf dem compilerserver
+### i.e. auf dem compilerserver (multi-master)
+https://github.com/puppetlabs/puppetlabs-haproxy
 ```
 puppet agent --configdir statedir
 puppet agent --configprint server
